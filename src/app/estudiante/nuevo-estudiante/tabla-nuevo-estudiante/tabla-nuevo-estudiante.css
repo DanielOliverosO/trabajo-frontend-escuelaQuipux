@@ -1,0 +1,161 @@
+
+.sectTabla{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px -8px #000000;
+}
+.titulo{
+    color:var(--grey-400);
+    font-size: 20px;
+    font-weight: 100;
+}
+.tituloBlue{
+    color:var(--blue-50);
+    font-size: 20px;
+}
+table{
+    display: grid;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+    box-shadow: 8px 8px 10px -8px #000000;
+    margin-top: 20px;
+}
+tbody{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr  ;
+}
+thead{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height:55px;
+    border-radius: 5px 5px 0px 0px;
+    background-color:var(--blue-100);
+    color:#fff;
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+th{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:20px;
+    font-weight: 50;
+}
+.divTitulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.divMost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey-200);
+    font-size: 15px;
+    gap:5px;
+}
+.nMost{
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    align-items: center;
+    color: var(--grey-300);
+    font-size: 15px;
+    box-shadow: 3px 3px 6px -4px #000000;
+}
+.nMost:hover{
+    outline: none;
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-500);
+}
+.nMost:focus{
+    outline: none;
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-300);
+}
+.bTabla{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:20px 0px 0px 0px;
+    color: var(--grey-200);
+    font-size: 15px;
+    justify-content: start;
+}
+.selectPartTabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.selectPartTabla > button{
+    background-color: #fff;
+    border-radius: 3px;
+    border:0px;
+    align-items: center;
+    color: var(--grey-400);
+    font-size: 15px;
+    box-shadow: 1px 1px 5px -3px #000000;
+    min-width: 25px;
+    min-height: 25px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.selectPartTabla > button:hover{
+    background-color: var(--blue-50);
+    color: #fff;
+}
+th{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:20px;
+    font-weight: 50;
+}
+tr{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height:55px;
+    
+    color:#fff;
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    
+}
+td{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px 0px;
+    font-weight: 50;
+    height:55px;
+    color: var(--grey-400);
+}
+.tr-imp{
+    background-color: var(--grey-50);
+}
+.formPart{
+    border: 2px solid var(--grey-200);
+    width: 100%;
+    border-radius: 5px;
+    color:var(--grey-200);
+    font-size: 18px;
+    height: 42px;
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+}
+.formPart:hover{
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-300);
+}
+.formPart:focus{
+    outline: none;
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-300);
+}

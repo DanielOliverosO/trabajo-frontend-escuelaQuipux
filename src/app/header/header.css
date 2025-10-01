@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 60px;
+    box-shadow: 5px 5px 10px -8px #000000;
+
+}
+img{
+    height: 35px;
+}
+.material-icons-outlined{
+    font-size: 40px;
+    color: #000000;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.material-icons-outlined:hover{
+    color: var(--blue-50);
+}
+div{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: var(--grey-200);
+    gap: 10px;
+    font-weight: bold;
+}

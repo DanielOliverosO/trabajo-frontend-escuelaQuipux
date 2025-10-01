@@ -1,0 +1,55 @@
+
+
+        <form class="sectforms sectforms-col" action="/filtrarEstudiantes" method="post">
+            <div class="sectformsPart sectformsPart-2col">
+                <div>
+                    <label for="grado">Grado</label>
+                    <div>
+                    <select id="grado" class="formPart">
+                    <option value=""></option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="grupo">Grupo</label>
+                    <div>
+                    <select id="grupo"class="formPart ">
+                    <option value=""></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="sectformsPart">
+                <label for="nIdentificacion">Identificacion</label>
+                <div class=" sectformsPart-Id">
+                    <select class="formPart">
+                    <option value="">TI</option>
+                    <option value="CC">CC</option>
+                    <option value="CE">CE</option>
+                    </select>
+                    <input id="nIdentificacion" class="formPart" placeholder="Número documento" type="number">
+                </div>
+            </div>
+            <div class="sectformsPart">
+                <label for="estudiante">Estudiante</label>
+                <div>
+                <select id="estudiante" class="formPart">
+                <option value=" ">Seleccionar</option>
+                <option value="Camila Fernandez Rojas">Camila Fernandez Rojas</option>
+                <option value="Juan Felipe Montoya Rios">Juan Felipe Montoya Rios</option>
+                <option value="Luisa Maria Cruz Hernandez">Luisa Maria Cruz Hernandez</option>
+                <option value="Ana Maria Bedoya Hernandez">Ana Maria Bedoya Hernandez</option>
+                <option value="Santiago Sanchez Rivera">Santiago Sanchez Rivera</option>
+                </select>
+                </div>
+            </div>
+            <div class="sectformsPart sectformsPart-Buttons">
+                <button  type="submit"class="btn-blue">Buscar</button>
+                <button class="btn-white">Limpiar filtros</button>
+            </div>
+        </form>

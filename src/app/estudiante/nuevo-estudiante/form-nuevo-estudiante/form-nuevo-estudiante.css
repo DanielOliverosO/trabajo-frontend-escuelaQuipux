@@ -1,0 +1,118 @@
+.sectforms{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px -8px #000000;
+}
+.sectforms-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.sectforms-row{
+    display: grid;
+    grid-template-rows: 30px 1fr 1fr 1fr 1fr;
+}
+.sectforms-C1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.sectForms-3col{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.btn-blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: var(--blue-50);
+    border:none;
+    color:#fff;
+    width: 45%;
+    min-width: 130px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin:10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-blue:hover{
+    background-color:#fff;
+    color:var(--blue-50);
+    border: 2px solid var(--blue-50);
+}
+.btn-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: #fff;
+    border: 2px solid var(--blue-50);
+    color:var(--blue-50);
+    width: 45%;
+    min-width: 130px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin:10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-white:hover{
+    background-color: var(--blue-50);
+    color: #fff;
+}
+.formPart{
+    border: 2px solid var(--grey-200);
+    width: 100%;
+    border-radius: 5px;
+    color:var(--grey-200);
+    font-size: 18px;
+    height: 42px;
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+}
+.formPart:hover{
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-300);
+}
+.formPart:focus{
+    outline: none;
+    border:2px solid var(--blue-50);
+    background-color: var(--grey-50);
+    color: var(--grey-300);
+}
+.formPart::placeholder{
+    color:var(--grey-200);
+}
+.sectformsPart{
+    display: grid;
+    font-size: 18px;
+    color: var(--grey-400);
+    margin: 10px;
+    align-items: center;
+}
+.sectformsPart-Id{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+.sectformsPart-Buttons{
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+.sectformsPart-2col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.tituloBlue{
+    color:var(--blue-50);
+    font-size: 20px;
+}
+.radio{
+    outline: none;
+    height: 18px;
+    width: 18px
+}
