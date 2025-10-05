@@ -1,35 +1,30 @@
-<body>
-    
-    <app-header/>
-    <div class="divP">
-    <app-side-bar/>
-        <main>
-            <article class="artAdmin">
-                <div  *ngIf="!nuevoEstudiante">
-                    <h1>Administracion de estudiantes</h1>
-                </div>
-                <div *ngIf="nuevoEstudiante">
-                    <h1>
-                        <label class="tituloBlue">Administracion de estudiantes / </label>
-                        <label>Estudiante</label>
-                    </h1>
-                </div>
-                <div  *ngIf="!nuevoEstudiante">
-                    <button class="btn-nEstudiante" (click)="mostFormNuevEstu()" >
-                        <span class="material-icons-round">add_circle_outline</span>
-                        <span>Nuevo registro</span>
-                    </button>
-                </div>
-            </article>
-            
-            <app-administracion-estudiante *ngIf="!nuevoEstudiante"/>
-            <app-nuevo-estudiante *ngIf="nuevoEstudiante"/>
-            <div class="sectformsPart sectformsPart-Buttons" *ngIf="nuevoEstudiante">
-                <button class="btn-blue" (click)="mostFormNuevBusq()" >Guardar</button>
-                <button class="btn-white" (click)="mostFormNuevBusq()">Cancelar</button>
-            </div>
-        </main>
-    </div>
-    
-    
-</body>
+<main>
+    <article class="artAdmin">
+        <div *ngIf="!nuevoEstudiante">
+            <h1>Administracion de estudiantes</h1>
+        </div>
+        <div *ngIf="nuevoEstudiante">
+            <h1>
+                <label class="tituloBlue">Administracion de estudiantes / </label>
+                <label>Estudiante</label>
+            </h1>
+        </div>
+        <div *ngIf="!nuevoEstudiante">
+            <button class="btn-nEstudiante" (click)="mostFormNuevEstu()">
+                <span class="material-icons-round">add_circle_outline</span>
+                <span>Nuevo registro</span>
+            </button>
+        </div>
+    </article>
+    <article>
+
+        <app-administracion-estudiante *ngIf="!nuevoEstudiante" />
+        <app-nuevo-estudiante *ngIf="nuevoEstudiante" />
+        <div class="sectformsPart sectformsPart-Buttons" *ngIf="nuevoEstudiante">
+            <button class="btn-blue" (click)="mostFormNuevBusq()">Guardar</button>
+            <button class="btn-white" (click)="mostFormNuevBusq()">Cancelar</button>
+        </div>
+
+        
+    </article>
+</main>

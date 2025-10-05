@@ -7,12 +7,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './admin-estudiante.css'
 })
 export class AdminEstudiante {
-  public nuevoEstudiante: boolean = false;
-  mostFormNuevEstu(){
-    this.nuevoEstudiante = true;
-  }
-  mostFormNuevBusq(){
-    this.nuevoEstudiante = false;
-  }
-
 }

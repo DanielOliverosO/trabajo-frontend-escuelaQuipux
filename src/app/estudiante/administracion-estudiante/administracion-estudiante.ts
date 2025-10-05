@@ -9,5 +9,5 @@ import { AdminEstudiante } from "./admin-estudiante/admin-estudiante";
   styleUrl: './administracion-estudiante.css'
 })
 export class AdministracionEstudiante {
-
+  
 }

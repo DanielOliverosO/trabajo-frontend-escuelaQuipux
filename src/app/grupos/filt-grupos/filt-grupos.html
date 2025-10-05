@@ -1,6 +1,16 @@
 <form class="sectforms sectforms-col" action="/filtrarEstudiantes" method="post">
     <div class="sectformsPart sectformsPart-2col">
         <div>
+            <label for="grupo">Grupo</label>
+            <div>
+                <select id="grupo" class="formPart ">
+                    <option value=""></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
+        </div>
+        <div>
             <label for="grado">Grado</label>
             <div>
                 <select id="grado" class="formPart">
@@ -11,32 +21,11 @@
                 </select>
             </div>
         </div>
-        <div>
-            <label for="grupo">Grupo</label>
-            <div>
-                <select id="grupo" class="formPart ">
-                    <option value=""></option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                </select>
-            </div>
-        </div>
     </div>
     <div class="sectformsPart">
-        <label for="nIdentificacion">Identificacion</label>
-        <div class=" sectformsPart-Id">
-            <select class="formPart">
-                <option value="">TI</option>
-                <option value="CC">CC</option>
-                <option value="CE">CE</option>
-            </select>
-            <input id="nIdentificacion" class="formPart" placeholder="Número documento" type="number">
-        </div>
-    </div>
-    <div class="sectformsPart">
-        <label for="estudiante">Estudiante</label>
+        <label for="profesor">Profesor</label>
         <div>
-            <select id="estudiante" class="formPart">
+            <select id="profesor" class="formPart">
                 <option value=" ">Seleccionar</option>
                 <option value="Camila Fernandez Rojas">Camila Fernandez Rojas</option>
                 <option value="Juan Felipe Montoya Rios">Juan Felipe Montoya Rios</option>

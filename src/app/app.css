@@ -1,0 +1,10 @@
+body{
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    background-color: var(--grey-50);
+    margin: 0px;
+}
+.divP {
+    display: grid;
+    grid-template-columns: 280px 1fr; 
+}

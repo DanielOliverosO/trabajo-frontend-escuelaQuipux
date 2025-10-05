@@ -1,108 +1,107 @@
-
-    <section class="sectTabla">
-        <div class="divTitulo">
-            <label class="titulo">Resultados</label>
-            <div class="divMost">
-                <span>Mostrar</span>
-                <select class="nMost">
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </div>
+<section class="sectTabla">
+    <div class="divTitulo">
+        <label class="titulo">Resultados</label>
+        <div class="divMost">
+            <span>Mostrar</span>
+            <select class="nMost">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
-        <table>
-            <thead>
-                <th>Codigo</th>
-                <th>Identificacion</th>
-                <th>Estudiante</th>
-                <th>Grado</th>
-                <th>Grupo</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-            </thead>
-            <tbody>
-                <tr class="tr-imp">
-                    <td>2022101</td>
-                    <td>TI 1088123456</td>
-                    <td>Camila Fernandez Rojas</td>
-                    <td>10</td>
-                    <td>A</td>
-                    <td>En curso</td>
-                    <td>
-                        <div class="acciones">
-                            <span class="material-icons-outlined">remove_red_eye</span>
-                            <span class="material-icons-outlined">delete</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr >
-                    <td>2022102</td>
-                    <td>TI 1088123499</td>
-                    <td>Juan Felipe Montoya Rios</td>
-                    <td>10</td>
-                    <td>A</td>
-                    <td>Aprobado</td>
-                    <td>
-                        <div class="acciones">
-                            <span class="material-icons-outlined">remove_red_eye</span>
-                            <span class="material-icons-outlined">delete</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="tr-imp">
-                    <td>2022103</td>
-                    <td>TI 1089456789</td>
-                    <td>Luisa Maria Cruz Hernandez</td>
-                    <td>10</td>
-                    <td>B</td>
-                    <td>Reprobado</td>
-                    <td>
-                        <div class="acciones">
-                            <span class="material-icons-outlined">remove_red_eye</span>
-                            <span class="material-icons-outlined">delete</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr >
-                    <td>2022104</td>
-                    <td>TI 1088120099</td>
-                    <td>Ana Maria Bedoya Hernandez</td>
-                    <td>10</td>
-                    <td>B</td>
-                    <td>En curso</td>
-                    <td>
-                        <div class="acciones">
-                            <span class="material-icons-outlined">remove_red_eye</span>
-                            <span class="material-icons-outlined">delete</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="tr-imp">
-                    <td>2022105</td>
-                    <td>TI 1087013499</td>
-                    <td>Santiago Sanchez Rivera</td>
-                    <td>10</td>
-                    <td>A</td>
-                    <td>En curso</td>
-                    <td>
-                        <div class="acciones">
-                            <span class="material-icons-outlined">remove_red_eye</span>
-                            <span class="material-icons-outlined">delete</span>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="bTabla">
-            <label>Mostrado 1 al 5 de 150 registros</label>
-            <div class="selectPartTabla">
-                <button>Primero</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>Ultimo</button>
-            </div>
+    </div>
+    <table>
+        <thead>
+            <th>Codigo</th>
+            <th>Identificacion</th>
+            <th>Estudiante</th>
+            <th>Grado</th>
+            <th>Grupo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr class="tr-imp">
+                <td>2022101</td>
+                <td>TI 1088123456</td>
+                <td>Camila Fernandez Rojas</td>
+                <td>10</td>
+                <td>A</td>
+                <td>En curso</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined" (click)="openDialog()">delete</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>2022102</td>
+                <td>TI 1088123499</td>
+                <td>Juan Felipe Montoya Rios</td>
+                <td>10</td>
+                <td>A</td>
+                <td>Aprobado</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined">delete</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr-imp">
+                <td>2022103</td>
+                <td>TI 1089456789</td>
+                <td>Luisa Maria Cruz Hernandez</td>
+                <td>10</td>
+                <td>B</td>
+                <td>Reprobado</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined">delete</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>2022104</td>
+                <td>TI 1088120099</td>
+                <td>Ana Maria Bedoya Hernandez</td>
+                <td>10</td>
+                <td>B</td>
+                <td>En curso</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined">delete</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr-imp">
+                <td>2022105</td>
+                <td>TI 1087013499</td>
+                <td>Santiago Sanchez Rivera</td>
+                <td>10</td>
+                <td>A</td>
+                <td>En curso</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined">delete</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="bTabla">
+        <label>Mostrado 1 al 5 de 150 registros</label>
+        <div class="selectPartTabla">
+            <button>Primero</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>Ultimo</button>
         </div>
-    </section>
+    </div>
+</section>
