@@ -1,0 +1,55 @@
+<section class="sectTabla">
+    <div class="divTitulo">
+        <label class="titulo">Resultados</label>
+        <div class="divMost">
+            <span>Mostrar</span>
+            <select class="nMost">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <th>Codigo</th>
+            <th>Identificacion</th>
+            <th>Estudiante</th>
+            <th>Grado</th>
+            <th>Grupo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let est of estudiantes; let i = index" [ngClass]="{'tr-imp': i % 2 === 0}">
+                <td>{{ est.codigo }}</td>
+                <td>{{ est.tipoDocumento }} {{ est.numeroDocumento }}</td>
+                <td>
+                    {{ est.primerNombre }}
+                    <span *ngIf="est.segundoNombre"> {{ est.segundoNombre }}</span>
+                    {{ est.primerApellido }} {{ est.segundoApellido }}
+                </td>
+                <td>{{ est.grado }}</td>
+                <td>{{ est.grupo }}</td>
+                <td>{{ est.estado }}</td>
+                <td>
+                    <div class="acciones">
+                        <span class="material-icons-outlined">remove_red_eye</span>
+                        <span class="material-icons-outlined" (click)="openDialog()">delete</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="bTabla">
+        <label>Mostrado 1 al 5 de 150 registros</label>
+        <div class="selectPartTabla">
+            <button>Primero</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>Ultimo</button>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { Estudiante } from './estudiante/estudiante';
-import { Grupos } from './grupos/grupos';
+import { Estudiante } from './components/estudiante/estudiante';
+import { Grupos } from './components/grupos/grupos';
 
 export const routes: Routes = [
     {path: 'estudiante', component: Estudiante},
