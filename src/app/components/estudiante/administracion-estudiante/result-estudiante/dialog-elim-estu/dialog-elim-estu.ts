@@ -5,7 +5,6 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ResultEstudiante } from '../result-estudiante';
 
 @Component({
   selector: 'app-dialog-elim-estu',
@@ -20,7 +19,6 @@ export class DialogElimEstu {
     this.dialogRef.close();
   }
   confirmDelete() {
-    // Lógica para eliminar el estudiante
-    this.dialogRef.close(true); // Puedes pasar un valor para indicar que se confirmó la eliminación
+    this.dialogRef.close(true); 
   }
 }

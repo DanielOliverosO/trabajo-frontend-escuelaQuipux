@@ -3,7 +3,6 @@ import {DialogElimEstu} from './dialog-elim-estu/dialog-elim-estu';
 import {MatDialog} from '@angular/material/dialog';
 import { Estudiante } from '../../../../models/estudiante';
 import { EstudianteService } from '../../../../services/estudianteService';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 @Component({
