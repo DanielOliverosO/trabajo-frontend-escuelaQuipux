@@ -3,12 +3,13 @@
         <label class="titulo">Resultados</label>
         <div class="divMost">
             <span>Mostrar</span>
-            <select class="nMost">
+            <select class="nMost" [(ngModel)]="pageSize" (change)="onPageSizeChange()">
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
         </div>
+
     </div>
     <table>
         <thead>
@@ -21,7 +22,7 @@
             <th>Acciones</th>
         </thead>
         <tbody>
-            <tr *ngFor="let est of estudiantes; let i = index" [ngClass]="{'tr-imp': i % 2 === 0}">
+            <tr *ngFor="let est of pagedEstudiantes; let i = index" [ngClass]="{'tr-imp': i % 2 === 0}">
                 <td>{{ est.codigo }}</td>
                 <td>{{ est.tipoDocumento }} {{ est.numeroDocumento }}</td>
                 <td>
@@ -42,14 +43,11 @@
         </tbody>
     </table>
     <div class="bTabla">
-        <label>Mostrado 1 al 5 de 150 registros</label>
+        <label>Mostrando {{ (currentPage - 1) * pageSize + 1 }} al {{ currentPage * pageSize > estudiantes.length ? estudiantes.length : currentPage * pageSize }} de {{ estudiantes.length }} registros</label>
         <div class="selectPartTabla">
-            <button>Primero</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>Ultimo</button>
+            <button (click)="onPageChange(1)" [disabled]="currentPage === 1">Primero</button>
+            <button *ngFor="let page of pages" (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
+            <button (click)="onPageChange(totalPages)" [disabled]="currentPage === totalPages">Ultimo</button>
         </div>
     </div>
 </section>

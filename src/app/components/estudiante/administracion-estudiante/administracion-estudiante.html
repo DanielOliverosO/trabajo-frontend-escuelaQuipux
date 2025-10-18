@@ -1,4 +1,4 @@
 <main>
-    <app-admin-estudiante/>
-    <app-result-estudiante/>
+    <app-admin-estudiante (search)="onFilterChange($event)"></app-admin-estudiante>
+    <app-result-estudiante [filters]="filterValues"></app-result-estudiante>
 </main>

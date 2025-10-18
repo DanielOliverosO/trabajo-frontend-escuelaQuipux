@@ -8,6 +8,7 @@ export interface Estudiante {
   segundoApellido?: string;
   sexo: 'femenino' | 'masculino';
   fechaNacimiento: string;
+  telResi?: string;
   celular: string;
   correoElectronico: string;
   direccionResidencia: string;
@@ -15,4 +16,14 @@ export interface Estudiante {
   grado: string;
   grupo: string;
   estado: 'aprobado' | 'reprobado' | 'en curso';
+  inscripciones?: Inscripcion[];
+}
+
+export interface Inscripcion {
+  id: { codigoCurso: string; };
+  grado: string;
+  grupo: string;
+  notaPromedio: number | null;
+  fecha: number;
+  estado: string;
 }

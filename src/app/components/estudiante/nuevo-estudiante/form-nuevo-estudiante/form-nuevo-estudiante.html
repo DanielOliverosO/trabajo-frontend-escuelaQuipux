@@ -1,33 +1,33 @@
-<form class="sectforms sectforms-row ">
+<form class="sectforms sectforms-row" [formGroup]="studentForm">
         <label class="tituloBlue">Informacion del estudiante</label>
         <div class="sectforms-col">
             <div  class="sectformsPart">   
                 <label for="codigo">Codigo</label>
                 <div>
-                <input id="codigo" class="formPart" placeholder="Codigo" type="number">
+                <input id="codigo" class="formPart" placeholder="Codigo" type="number" formControlName="codigo" readonly>
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="nIdentificacion">Identificacion</label>
                 <div class=" sectformsPart-Id">
-                <select class="formPart">
-                <option value="">TI</option>
+                <select class="formPart" formControlName="tipoDocumento">
+                <option value="TI">TI</option>
                 <option value="CC">CC</option>
                 <option value="CE">CE</option>
                 </select>
-                <input id="nIdentificacion" class="formPart" placeholder="Número documento" type="number">
+                <input id="nIdentificacion" class="formPart" placeholder="Número documento" type="number" formControlName="numeroDocumento">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="primerNom" >Primer nombre</label>
                 <div>
-                <input id="primerNom" class="formPart" placeholder="Ingrese el primer nombre" type="text">
+                <input id="primerNom" class="formPart" placeholder="Ingrese el primer nombre" type="text" formControlName="primerNombre">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="segundoNom">Segundo nombre (Opcional)</label>
                 <div>
-                <input id="segundoNom" class="formPart" placeholder="Ingrese el segundo nombre" type="text">
+                <input id="segundoNom" class="formPart" placeholder="Ingrese el segundo nombre" type="text" formControlName="segundoNombre">
                 </div>
             </div>
         </div>
@@ -35,24 +35,24 @@
             <div  class="sectformsPart">   
                 <label for="primerApell">Primer apellido</label>
                 <div>
-                <input id="primerApell" class="formPart" placeholder="Ingrese el primer apellido" type="text">
+                <input id="primerApell" class="formPart" placeholder="Ingrese el primer apellido" type="text" formControlName="primerApellido">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="segundoApell">Segundo apellido</label>
                 <div>
-                <input id="segundoApell"class="formPart" placeholder="Ingrese el apellido" type="text">
+                <input id="segundoApell"class="formPart" placeholder="Ingrese el apellido" type="text" formControlName="segundoApellido">
                 </div>
             </div>
             <div class="sectformsPart ">
                 <label>Sexo</label>
                 <div class="sectformsPart-2col">
                     <div>
-                    <input for="femenino"class="formPart radio" value="femenino" type="radio"  name="sexo"checked>
+                    <input for="femenino"class="formPart radio" value="femenino" type="radio"  name="sexo" formControlName="sexo">
                     <label for="femenino">Femenino</label>
                     </div>
                     <div>
-                    <input for="masculino"class="formPart radio" value="masculino" type="radio" name="sexo" checked>
+                    <input for="masculino"class="formPart radio" value="masculino" type="radio" name="sexo" formControlName="sexo">
                     <label for="masculino">Masculino   </label>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
             <div class="sectformsPart">
                 <label for="fechNaci" >Fecha de nacimiento</label>
                 <div>
-                <input id="fechNaci"class="formPart" placeholder="Ingrese el segundo nombre" type="date">
+                <input id="fechNaci"class="formPart" placeholder="Ingrese el segundo nombre" type="date" formControlName="fechaNacimiento">
                 </div>
             </div>
         </div>
@@ -69,24 +69,24 @@
             <div class="sectformsPart">   
                 <label for="telResi" >Telefono de residencia (Opcional)</label>
                 <div>
-                <input id="telResi" class="formPart" placeholder="Ingrese el numero" type="number">
+                <input id="telResi" class="formPart" placeholder="Ingrese el numero" type="number" formControlName="telResi">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="telCelu" >Celular</label>
                 <div>
-                <input id="telCelu" class="formPart" placeholder="Ingrese el numero" type="number">
+                <input id="telCelu" class="formPart" placeholder="Ingrese el numero" type="number" formControlName="celular">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="correo" >Correo electronico</label>
                 <div>
-                <input id="correo" class="formPart" placeholder="Ej. prueba@correo.com" type="text">
+                <input id="correo" class="formPart" placeholder="Ej. prueba@correo.com" type="text" formControlName="correoElectronico">
                 </div>
             </div>
             <div class="sectformsPart">
                 <label for="ciudadR" >Ciudad de residencia</label>
-                    <select id="ciudadR" class="formPart ">
+                    <select id="ciudadR" class="formPart " formControlName="ciudadResidencia">
                     <option value=" ">Seleccionar</option>
                     <option value="Bogota">Bogota</option>
                     <option value="Medellin">Medellin</option>
@@ -100,14 +100,14 @@
             <div class="sectformsPart">
                 <label for="direccion">Direccion de residencia</label>
                 <div>
-                <input id="direccion" class="formPart" placeholder="Ej. Carrera 12 #45-78 Piso 2" type="text">
+                <input id="direccion" class="formPart" placeholder="Ej. Carrera 12 #45-78 Piso 2" type="text" formControlName="direccionResidencia">
                 </div>
             </div>
             <div class="sectformsPart sectformsPart-2col">
                 <div>
                     <label for="grado" >Grado</label>
                     <div>
-                    <select id="grado" class="formPart">
+                    <select id="grado" class="formPart" formControlName="grado">
                     <option value=""></option>
                     <option value="10">10</option>
                     <option value="11">11</option>
@@ -118,7 +118,7 @@
                 <div>
                     <label for="grupo" >Grupo</label>
                     <div>
-                    <select id="grupo"class="formPart">
+                    <select id="grupo"class="formPart" formControlName="grupo">
                     <option value=""></option>
                     <option value="A">A</option>
                     <option value="B">B</option>
