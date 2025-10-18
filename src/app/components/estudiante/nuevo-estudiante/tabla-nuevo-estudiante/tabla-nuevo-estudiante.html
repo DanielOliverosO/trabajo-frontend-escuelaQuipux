@@ -1,9 +1,12 @@
 <section class="sectTabla" [formGroup]="coursesForm">
     <div class="divTitulo">
         <label class="titulo">Cursos realizados</label>
-        <button (click)="addCourse()">Agregar Curso</button>
-    </div>
+        <div style="display:flex;gap:.5rem;align-items:center;margin-left:1rem;">
+            <button type="button" class="btn-blue" (click)="saveCurrentCourse()">Guardar curso</button>
+        </div>
+        </div>
     <table formArrayName="courses">
+        
         <thead>
             <th>Codigo</th>
             <th>Año</th>
@@ -13,26 +16,36 @@
             <th>Nota promedio</th>
             <th>Acciones</th>
         </thead>
-        <tbody *ngFor="let course of courses.controls; let i=index" [formGroupName]="i">
-                <tr class="tr-imp">
-                    <td><input class="formPart" formControlName="codigoCurso"></td>
-                    <td><input class="formPart" formControlName="fecha"></td>
-                    <td><input class="formPart" formControlName="grado"></td>
-                    <td><input class="formPart" formControlName="grupo"></td>
-                    <td>
-                        <select class="formPart" formControlName="estado">
-                            <option value="en curso">En curso</option>
-                            <option value="aprobado">Aprobado</option>
-                            <option value="reprobado">Reprobado</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input class="formPart" formControlName="notaPromedio">
-                    </td>
-                    <td>
-                        <button (click)="removeCourse(i)">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
+        <!-- Editable row (always single) -->
+        <tbody *ngIf="courses.controls.length>0" [formGroupName]="0">
+            <tr class="tr-imp editable-row">
+                <td><input class="formPart" formControlName="codigoCurso" readonly [disabled]="true"></td>
+                <td><input type="number" class="formPart" formControlName="fecha"></td>
+                <td><input type="number" class="formPart" formControlName="grado"></td>
+                <td><input class="formPart" formControlName="grupo"></td>
+                <td>
+                    <select class="formPart" formControlName="estado">
+                        <option value="en curso">En curso</option>
+                        <option value="aprobado">Aprobado</option>
+                        <option value="reprobado">Reprobado</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="formPart" formControlName="notaPromedio">
+                </td>
+            </tr>
+        </tbody>
+
+        <!-- Saved rows -->
+        <tbody *ngFor="let saved of savedCourses; let si = index">
+            <tr [ngClass]="{'tr-imp': si % 2 === 0}">
+                <td>{{ saved.id?.codigoCurso || saved.codigoCurso }}</td>
+                <td>{{ saved.fecha }}</td>
+                <td>{{ saved.grado }}</td>
+                <td>{{ saved.grupo }}</td>
+                <td>{{ saved.estado }}</td>
+                <td>{{ saved.notaPromedio }}</td>
+            </tr>
+        </tbody>
     </table>
 </section>

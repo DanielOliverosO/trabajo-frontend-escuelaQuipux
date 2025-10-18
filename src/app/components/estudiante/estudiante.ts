@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AdministracionEstudiante } from "./administracion-estudiante/administracion-estudiante";
 import { NgIf } from "@angular/common";
 import { NuevoEstudiante } from "./nuevo-estudiante/nuevo-estudiante";
@@ -11,10 +11,16 @@ import { NuevoEstudiante } from "./nuevo-estudiante/nuevo-estudiante";
 })
 export class Estudiante {
   public nuevoEstudiante: boolean = false;
+  @ViewChild(NuevoEstudiante) nuevoEstudianteComp!: NuevoEstudiante;
   mostFormNuevEstu(){
     this.nuevoEstudiante = true;
   }
   mostFormNuevBusq(){
-    this.nuevoEstudiante = false;
+    // Si está en modo nuevo estudiante y el botón Guardar fue pulsado, solo guardar (no cerrar ni limpiar inscripciones)
+    if (this.nuevoEstudiante && this.nuevoEstudianteComp) {
+      this.nuevoEstudianteComp.saveEstudiante();
+    }
+    // Si quieres cerrar el formulario después de guardar, puedes hacerlo aquí (opcional)
+    // this.nuevoEstudiante = false;
   }
 }

@@ -1,0 +1,45 @@
+<section class="sectTabla">
+    <div class="divTitulo">
+        <label class="titulo">Evaluaciones</label>
+        <div class="divMost">
+            <span>Mostrar</span>
+            <select class="nMost" [(ngModel)]="pageSize" (change)="onPageSizeChange()">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Estudiante</th>
+                <th>Materia</th>
+                <th>Fecha</th>
+                <th>Grado</th>
+                <th>Profesor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ev of evaluaciones; let i = index" [ngClass]="{'tr-imp': i % 2 === 0}">
+                <td>{{ ev.codigo_eval || ev.codigoEval }}</td>
+                <td>{{ ev.codigo_estudiante || ev.codigoEstudiante }}</td>
+                <td>{{ ev.codigo_materia || ev.codigoMateria }}</td>
+                <td>{{ ev.fecha | date:'shortDate' }}</td>
+                <td>{{ ev.grado }}</td>
+                <td>{{ ev.profesor }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <div class="bTabla">
+            <label>Mostrando {{ (currentPage - 1) * pageSize + 1 }} al {{ showingEnd }} de {{ filteredEvaluaciones.length }} registros</label>
+        <div class="selectPartTabla">
+            <button (click)="onPageChange(1)" [disabled]="currentPage === 1">Primero</button>
+            <button *ngFor="let page of pages" (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
+            <button (click)="onPageChange(totalPages)" [disabled]="currentPage === totalPages">Ultimo</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<div class="sectforms sectforms-col" [formGroup]="filterForm">
+
+
+    <div class="sectformsPart">
+            <label for="codigo_estudiante">Código Estudiante</label>
+            <input id="codigo_estudiante" class="formPart" placeholder="Código estudiante" formControlName="codigo_estudiante">
+    </div>
+    <div class="sectformsPart">
+            <label for="codigo_materia">Código Materia</label>
+            <input id="codigo_materia" class="formPart" placeholder="Código materia" formControlName="codigo_materia">
+
+    </div>
+    <div class="sectformsPart sectformsPart-2col">
+        <div>
+            <label for="fecha">Fecha</label>
+            <input id="fecha" class="formPart" type="date" formControlName="fecha">
+        </div>
+        <div>
+            <label for="grado">Grado</label>
+            <select id="grado" class="formPart" formControlName="grado">
+            <option value="">Todos</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+        </select>
+        </div>
+    </div>
+    <div class="sectformsPart">
+        <label for="profesor">Profesor</label>
+        <input id="profesor" class="formPart" placeholder="Nombre del profesor" formControlName="profesor">
+    </div>
+    <div class="sectformsPart sectformsPart-Buttons">
+        <button type="button" (click)="onSearch()" class="btn-blue">Buscar</button>
+        <button type="button" (click)="clearFilters()" class="btn-white">Limpiar filtros</button>
+    </div>
+</div>

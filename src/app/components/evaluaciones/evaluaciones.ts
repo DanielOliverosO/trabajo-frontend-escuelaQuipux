@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AdministracionEvaluaciones } from "./administracion-evaluaciones/administracion-evaluaciones";
 
 @Component({
   selector: 'app-evaluaciones',
-  imports: [],
+  imports: [FormsModule, AdministracionEvaluaciones],
   templateUrl: './evaluaciones.html',
-  styleUrl: './evaluaciones.css'
+  styleUrls: ['./evaluaciones.css']
 })
-export class Evaluaciones {
-
-}
+export class Evaluaciones {}

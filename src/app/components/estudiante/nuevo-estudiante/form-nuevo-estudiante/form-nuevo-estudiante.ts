@@ -25,7 +25,8 @@ export class FormNuevoEstudiante implements OnInit {
       sexo: ['femenino', Validators.required],
       fechaNacimiento: ['', Validators.required],
       telResi: [''],
-      celular: ['', Validators.required],
+  // celular must be exactly 10 digits
+  celular: ['', [Validators.required, Validators.pattern('^\\d{10}$')]],
       correoElectronico: ['', [Validators.required, Validators.email]],
       direccionResidencia: ['', Validators.required],
       ciudadResidencia: ['', Validators.required],
@@ -42,6 +43,12 @@ export class FormNuevoEstudiante implements OnInit {
   }
 
   getStudentData() {
-    return this.studentForm.value;
+    const raw = this.studentForm.value;
+    // ensure celular is sent as a digits-only string of length 10 (backend expects \"\\d{10}\")
+    if (raw.celular !== undefined && raw.celular !== null) {
+      const asStr = String(raw.celular).replace(/[^0-9]/g, '');
+      raw.celular = asStr;
+    }
+    return raw;
   }
 }

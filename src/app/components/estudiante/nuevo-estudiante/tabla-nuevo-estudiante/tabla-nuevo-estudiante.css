@@ -1,30 +1,22 @@
-
+/* Styles aligned with result-estudiante for consistent table appearance */
 .sectTabla{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px -8px #000000;
+    box-shadow: 0px 3px 6px #00000029;
 }
 .titulo{
     color:var(--grey-400);
     font-size: 20px;
     font-weight: 100;
 }
-.tituloBlue{
-    color:var(--blue-50);
-    font-size: 20px;
-}
 table{
     display: grid;
     width: 100%;
     border-radius: 5px;
     align-items: center;
-    box-shadow: 8px 8px 10px -8px #000000;
+    box-shadow: 0px 3px 6px #00000029;
     margin-top: 20px;
-}
-tbody{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr  ;
 }
 thead{
     display: grid;
@@ -35,7 +27,8 @@ thead{
     background-color:var(--blue-100);
     color:#fff;
     font-size: 15px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    /* 6 columns for cursos table */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 th{
     display: flex;
@@ -43,6 +36,31 @@ th{
     align-items: center;
     padding:20px;
     font-weight: 50;
+}
+tr{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height:55px;
+    color:#fff;
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+td{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px 0px;
+    font-weight: 50;
+    height:55px;
+    color: var(--grey-400);
+    transition: background-color 0.3s ease-in-out;
+}
+.tr-imp{
+    background-color: var(--grey-50);
+}
+tr:hover{
+    background-color: var(--grey-100);
 }
 .divTitulo{
     display: flex;
@@ -61,30 +79,11 @@ th{
     height: 30px;
     width: 40px;
     border-radius: 5px;
+    border:0px;
     align-items: center;
     color: var(--grey-300);
     font-size: 15px;
-    box-shadow: 3px 3px 6px -4px #000000;
-}
-.nMost:hover{
-    outline: none;
-    border:2px solid var(--blue-50);
-    background-color: var(--grey-50);
-    color: var(--grey-500);
-}
-.nMost:focus{
-    outline: none;
-    border:2px solid var(--blue-50);
-    background-color: var(--grey-50);
-    color: var(--grey-300);
-}
-.bTabla{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin:20px 0px 0px 0px;
-    color: var(--grey-200);
-    font-size: 15px;
-    justify-content: start;
+    box-shadow: 1px 1px 5px -3px #000000;
 }
 .selectPartTabla{
     display: flex;
@@ -108,36 +107,6 @@ th{
     background-color: var(--blue-50);
     color: #fff;
 }
-th{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding:20px;
-    font-weight: 50;
-}
-tr{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height:55px;
-    
-    color:#fff;
-    font-size: 15px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-    
-}
-td{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0px 20px 0px;
-    font-weight: 50;
-    height:55px;
-    color: var(--grey-400);
-}
-.tr-imp{
-    background-color: var(--grey-50);
-}
 .formPart{
     border: 2px solid var(--grey-200);
     width: 100%;
@@ -158,4 +127,25 @@ td{
     border:2px solid var(--blue-50);
     background-color: var(--grey-50);
     color: var(--grey-300);
+}
+.btn-blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    background-color: var(--blue-50);
+    border:none;
+    color:#fff;
+    width: 150px;
+    min-width: 150px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin:10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-blue:hover{
+    background-color:#fff;
+    color:var(--blue-50);
+    border: 2px solid var(--blue-50);
 }

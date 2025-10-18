@@ -20,7 +20,8 @@ export class EstudianteService {
     return this.http.get(`${this.apiUrl}/nextCodigo`, { responseType: 'text' });
   }
 
-  createEstudiante(data: { estudiante: Estudiante, inscripciones: any[] }): Observable<any> {
+  // backend expects a payload with 'estudiante' and 'cursos' fields
+  createEstudiante(data: { estudiante: Estudiante, cursos: any[] }): Observable<any> {
     return this.http.post(`${this.apiUrl}/postEstudiante`, data);
   }
 }

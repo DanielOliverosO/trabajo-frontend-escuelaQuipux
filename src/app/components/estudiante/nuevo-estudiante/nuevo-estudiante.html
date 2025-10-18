@@ -1,7 +1,5 @@
 <main>
-<app-form-nuevo-estudiante></app-form-nuevo-estudiante>
-<app-tabla-nuevo-estudiante></app-tabla-nuevo-estudiante>
-<div class="div-btn">
-    <button (click)="saveEstudiante()">Guardar</button>
-</div>
+<app-form-nuevo-estudiante #formEstudiante></app-form-nuevo-estudiante>
+<app-tabla-nuevo-estudiante [studentCodigo]="formEstudiante.studentForm.get('codigo')?.value"></app-tabla-nuevo-estudiante>
 </main>
+
